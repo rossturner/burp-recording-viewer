@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import {Icon} from "semantic-ui-react";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         >
           Learn React
         </a>
+        <Icon loading name='certificate' />
       </header>
     </div>
   );
