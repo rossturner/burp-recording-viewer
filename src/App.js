@@ -1,27 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
-import {Icon} from "semantic-ui-react";
+import React, {useEffect, useState} from 'react';
+import {Button, Grid, Icon} from "semantic-ui-react";
+import RecordingInput from "./RecordingInput";
+import RecordingView from "./RecordingView";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Icon loading name='certificate' />
-      </header>
-    </div>
-  );
+    const [showInput, setShowInput] = useState(true);
+    const [jsonData, setJsonData] = useState(undefined);
+
+    const onJsonParsed = (jsonData) => {
+        setShowInput(false);
+        setJsonData(jsonData);
+    }
+
+    const clear = () => {
+        setShowInput(true);
+        setJsonData(undefined);
+    }
+
+    return (
+        <Grid textAlign='left' style={{"padding": "30px"}}>
+            <Grid.Column style={{maxWidth: '80%', minWidth: '400'}}>
+                {showInput && <RecordingInput onJsonParsed={onJsonParsed} />}
+                {!showInput && <RecordingView jsonData={jsonData} onReset={clear} />}
+            </Grid.Column>
+        </Grid>
+    );
 }
 
 export default App;
