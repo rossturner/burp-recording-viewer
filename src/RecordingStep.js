@@ -79,6 +79,10 @@ const RecordingStep = ({stepJson}) => {
             icon = 'arrows alternate vertical';
             title = 'Scroll mousewheel';
             description = 'This is ignored in Burp playback';
+        case 'keyboard':
+            icon = 'keyboard';
+            title = 'Press key on keyboard';
+            description = stepJson['key'];
         default:
             console.error('Unrecognised event type: ', stepJson);
     }
