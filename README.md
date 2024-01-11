@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Burp Suite Recording Viewer
+
+This is a simple app to display the contents of the JSON produced by [Burp Suite Navigation Recorder](https://chromewebstore.google.com/detail/burp-suite-navigation-rec/anpapjclbjicacakeoggghfldppbkepg). 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
