@@ -32,9 +32,9 @@ const RecordingStep = ({stepJson}) => {
 
     const millisDescription = (millis) => {
         if (millis < 1000) {
-            return millis + 'ms';
+            return 'For ' + millis + 'ms';
         } else {
-            return (millis / 10000) + ' second(s)';
+            return 'For ' + (millis / 1000) + ' second(s)';
         }
     }
 
@@ -72,19 +72,21 @@ const RecordingStep = ({stepJson}) => {
             break;
         case 'wait':
             icon = 'hourglass';
-            title = 'Wait for';
-            description = millisDescription(stepJson['']);
+            title = 'Wait';
+            description = millisDescription(stepJson['durationInMillis']);
             break;
         case 'scroll':
             icon = 'arrows alternate vertical';
             title = 'Scroll mousewheel';
             description = 'This is ignored in Burp playback';
+            break;
         case 'keyboard':
             icon = 'keyboard';
             title = 'Press key on keyboard';
             description = stepJson['key'];
+            break;
         default:
-            console.error('Unrecognised event type: ', stepJson);
+            console.error('Unrecognised event type: ', JSON.stringify(stepJson));
     }
 
 
