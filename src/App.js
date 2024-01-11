@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react';
-import {Button, Grid, Icon} from "semantic-ui-react";
+import React, {useState} from 'react';
+import {Grid} from "semantic-ui-react";
 import RecordingInput from "./RecordingInput";
 import RecordingView from "./RecordingView";
 

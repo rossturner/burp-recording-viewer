@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Button, Form, Header, Message, Segment, TextArea} from "semantic-ui-react";
+import {Form, Header, Message, Segment, TextArea} from "semantic-ui-react";
 
 const RecordingInput = ({ onJsonParsed }) => {
     const [error, setError] = useState('');

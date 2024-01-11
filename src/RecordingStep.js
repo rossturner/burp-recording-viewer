@@ -1,6 +1,5 @@
 import React from 'react';
 import {Icon, Step, StepContent, StepDescription, StepTitle} from "semantic-ui-react";
-// import {Icon, Step, StepContent, StepTitle} from "semantic-ui-react";
 
 const RecordingStep = ({stepJson}) => {
     let unsupported = false;

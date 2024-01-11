@@ -1,7 +1,6 @@
 import React from 'react';
-// import {StepGroup} from "semantic-ui-react";
 import RecordingStep from "./RecordingStep";
-import {Button, Icon, Step, StepContent, StepDescription, StepGroup, StepTitle} from "semantic-ui-react";
+import {Button, Icon, Step, StepContent, StepGroup, StepTitle} from "semantic-ui-react";
 
 
 const RecordingView = ({jsonData, onReset}) => {
