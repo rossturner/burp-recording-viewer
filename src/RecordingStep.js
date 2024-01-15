@@ -12,8 +12,8 @@ const RecordingStep = ({stepJson}) => {
             description += ' href="'+elementJson['href']+'">';
         } else if (elementJson['name']) {
             description += ' name="'+elementJson['name']+'">';
-        } else if (elementJson['xpath'] && !isWithinShadowDom) {
-            description += '> with xpath ' + elementJson['xpath'];
+        } else if (elementJson['xPath'] && !isWithinShadowDom) {
+            description += '> with xpath ' + elementJson['xPath'];
         } else if (elementJson['textContent'] && !isWithinShadowDom) {
             description += '>' + elementJson['textContent'] + '</' + elementJson['tagName'].toLowerCase() + '>';
         } else if (elementJson['className']) {
